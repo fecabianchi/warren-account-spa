@@ -114,7 +114,7 @@ function UserStats(props) {
         </Col>
         <Col>
           <Button variant="primary" onClick={handleDepositShow} block>
-            Deposito
+            Depósito
           </Button>
         </Col>
         <Col>
@@ -147,7 +147,7 @@ function UserStats(props) {
 
       <Modal show={showDepositModal} onHide={handleDepositClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Deposito</Modal.Title>
+          <Modal.Title>Depósito</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
