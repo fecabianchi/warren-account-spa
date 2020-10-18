@@ -58,7 +58,13 @@ function UserStats(props) {
   }
 
   const handleValueChange = (e) => {
-    setValue(e.target.value)
+    let value = e.target.value;
+
+    if (value < 0) {
+      value = 0
+    }
+
+    setValue(value)
   }
 
   const handleDepositClose = () => setShowDepositModal(false)
@@ -131,7 +137,7 @@ function UserStats(props) {
           <Form>
             <Form.Group controlId="formValue">
               <Form.Label>Valor</Form.Label>
-              <Form.Control value={value} type="number" placeholder="Valor" onChange={handleValueChange} />
+              <Form.Control value={value} type="number" min="0" placeholder="Valor" onChange={handleValueChange} />
             </Form.Group>
           </Form>
         </Modal.Body>
@@ -153,7 +159,7 @@ function UserStats(props) {
           <Form>
             <Form.Group controlId="formValue">
               <Form.Label>Valor</Form.Label>
-              <Form.Control value={value} type="number" placeholder="Valor" onChange={handleValueChange} />
+              <Form.Control value={value} type="number" min="0" placeholder="Valor" onChange={handleValueChange} />
             </Form.Group>
           </Form>
         </Modal.Body>
@@ -175,7 +181,7 @@ function UserStats(props) {
           <Form>
             <Form.Group controlId="formValue">
               <Form.Label>Valor</Form.Label>
-              <Form.Control value={value} type="number" placeholder="Valor" onChange={handleValueChange} />
+              <Form.Control value={value} type="number" min="0" placeholder="Valor" onChange={handleValueChange} />
             </Form.Group>
             <Form.Group controlId="formSelect">
               <Form.Label>Conta</Form.Label>
